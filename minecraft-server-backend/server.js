@@ -18,4 +18,13 @@ app.listen(3000, () => {
 const userRoutes = require('./routes/user');
 
 app.use('/api/user', userRoutes);
+    const rateLimit = require('express-rate-limit');
+
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 минут
+  max: 20, // не больше 20 запросов за 15 минут с одного IP
+  message: 'Слишком много запросов. Попробуйте позже.'
+});
+
+app.use('/api/auth/', authLimiter);
 });
