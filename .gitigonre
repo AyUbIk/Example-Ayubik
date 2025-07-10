@@ -1,0 +1,15 @@
+# Папки
+node_modules/        # Зависимости, ставятся через npm install
+.env                 # Конфиденциальные данные (токены, пароли, ключи)
+dist/                # Если билд идёт в папку dist
+logs/                # Логи, если ты их сохраняешь
+
+# Системное
+.DS_Store            # от macOS
+Thumbs.db            # от Windows
+.idea/               # настройки WebStorm/IntelliJ
+.vscode/             # настройки VS Code
+
+# Служебное
+*.log                # Все логи
+*.bak                # Резервные файлы
