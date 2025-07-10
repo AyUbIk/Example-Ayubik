@@ -15,4 +15,7 @@ app.use('/api/auth', authRoutes);
 
 app.listen(3000, () => {
     console.log('🚀 Сервер запущен на http://localhost:3000');
+const userRoutes = require('./routes/user');
+
+app.use('/api/user', userRoutes);
 });
